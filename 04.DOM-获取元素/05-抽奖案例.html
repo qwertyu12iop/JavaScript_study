@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <strong>抽奖</strong>
+        <h1>一等奖:<span id="one"></span></h1>
+        <h3>二等奖:<span id="two"></span></h3>
+        <h5>三等奖:<span id="three"></span></h5>
+    </div>
+    <script>
+        const name = ['小红', '小绿', '小黄', '小蓝', '小紫', '小橙']
+        const random = Math.floor(Math.random() * name.length)
+        const one = document.querySelector('#one')
+        one.innerHTML = name[random]
+        name.splice(random, 1)
+        const random2 = Math.floor(Math.random() * name.length)
+        const two = document.querySelector('#two')
+        two.innerHTML = name[random2]
+        name.splice(random2, 1)
+        const random3 = Math.floor(Math.random() * name.length)
+        const three = document.querySelector('#three')
+        three.innerHTML = name[random3]
+
+
+
+    </script>
+</body>
+
+</html>

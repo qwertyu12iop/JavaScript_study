@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">456</div>
+    <div class="box">123</div>
+    <p id="nav">导航</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        //1.获取匹配的第一个元素
+        // const box = document.querySelector('div')
+        // const box = document.querySelector('.box')
+        // const nav = document.querySelector('#nav')
+        // console.log(box)
+        // console.log(nav);
+        //获取第一个小li
+        const li = document.querySelector('ul li:first-child')
+        console.log(li);
+
+        //返回值：CSS选择器匹配的第一个元素，如果没有匹配的元素，则返回null。
+
+        //2.获取匹配的所有元素
+        const lis = document.querySelectorAll('ul li')
+        for (let i = 0; i < lis.length; i++) {
+            console.log(lis[i]);
+
+        }
+        console.log(lis);//返回值：一个NodeList对象，包含所有匹配的元素。
+        //得到的是一个伪数组，有长度索引，不能用pop()等方法
+        //只有一个元素用querySelectorAll()返回的也是数组
+
+
+
+        //获取DOM元素的其他方法
+        //1.通过id获取元素
+        // const nav = document.getElementById('nav')
+        //2.通过标签名获取元素
+        // const divs = document.getElementsByTagName('div')
+        //3.通过类名获取元素
+        // const divs = document.getElementsByClassName('box')
+
+
+
+
+    </script>
+</body>
+
+</html>
